@@ -16,7 +16,12 @@ workflows:
   version: 2
   run_foo:
     jobs:
-      - foo
+      - foo:
+          filters:
+            branches:
+              only:
+                - /trying-.*/
+                - /staging-.*/
       - bar:
           requires:
             - foo
