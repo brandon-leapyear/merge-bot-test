@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: centos:7
     steps:
-      - run: sleep 60 # sleep for 1 minute
+      - run: echo foo
   bar:
     docker:
       - image: centos:7
