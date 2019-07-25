@@ -3,14 +3,13 @@ version: 2
 jobs:
   foo:
     docker:
-      - image: centos:7
+      - image: *docker-image
     steps:
       - run: echo foo
   bar:
     docker:
       - image: centos:7
     steps:
-      - run: echo hi
 
 workflows:
   version: 2
