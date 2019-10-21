@@ -10,7 +10,10 @@ jobs:
     docker:
       - image: centos:7
     steps:
-      - run: echo hi
+      - run:
+          command: sleep 3600
+          no_output_timeout: 30m
+      - run: cat non-existent
 
 workflows:
   version: 2
