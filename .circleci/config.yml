@@ -3,14 +3,20 @@ version: 2
 jobs:
   foo:
     docker:
-      - image: centos:7
+      - image: cimg/base:2020.01
     steps:
       - run: echo foo
   bar:
     docker:
-      - image: centos:7
+      - image: cimg/base:2020.01
     steps:
       - run: echo hi
+  baz:
+    docker:
+      - image: cimg/base:2020.01
+    steps:
+      - run: sleep 10
+      - run: echo baz
 
 workflows:
   version: 2
@@ -25,3 +31,6 @@ workflows:
       - bar:
           requires:
             - foo
+      - baz:
+          requires:
+            - bar
