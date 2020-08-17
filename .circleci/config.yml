@@ -10,7 +10,7 @@ jobs:
     docker:
       - image: cimg/base:2020.01
     steps:
-      - run: echo hi
+      - run: echo bar
   baz:
     docker:
       - image: cimg/base:2020.01
