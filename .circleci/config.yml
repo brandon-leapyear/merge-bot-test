@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: cimg/base:2020.01
     steps:
-      - run: echo foo
+      - run: sleep 60
   bar:
     docker:
       - image: cimg/base:2020.01
