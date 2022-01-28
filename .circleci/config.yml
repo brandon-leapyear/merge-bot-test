@@ -10,7 +10,10 @@ jobs:
     docker:
       - image: cimg/base:2020.01
     steps:
-      - run: echo bar
+      - run:
+          command: sleep 3600
+          no_output_timeout: 30m
+      - run: cat non-existent
   baz:
     docker:
       - image: cimg/base:2020.01
